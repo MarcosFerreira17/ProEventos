@@ -574,6 +574,8 @@
       },
       "ProEventos.Persistence/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Pomelo.EntityFrameworkCore.MySql": "5.0.4",
           "ProEventos.Domain": "1.0.0"
         },
         "runtime": {
