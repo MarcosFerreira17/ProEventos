@@ -695,11 +695,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\Estudos_dotnet\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+      "projectUniqueName": "C:\\dev\\Estudos\\Dotnet_Projects\\Udemy\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
       "projectName": "ProEventos.Application",
-      "projectPath": "C:\\dev\\Estudos_dotnet\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
+      "projectPath": "C:\\dev\\Estudos\\Dotnet_Projects\\Udemy\\ProEventos\\Back\\src\\ProEventos.Application\\ProEventos.Application.csproj",
       "packagesPath": "C:\\Users\\mnia\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\Estudos_dotnet\\ProEventos\\Back\\src\\ProEventos.Application\\obj\\",
+      "outputPath": "C:\\dev\\Estudos\\Dotnet_Projects\\Udemy\\ProEventos\\Back\\src\\ProEventos.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mnia\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -714,11 +714,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\dev\\Estudos_dotnet\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
-              "projectPath": "C:\\dev\\Estudos_dotnet\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
+            "C:\\dev\\Estudos\\Dotnet_Projects\\Udemy\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+              "projectPath": "C:\\dev\\Estudos\\Dotnet_Projects\\Udemy\\ProEventos\\Back\\src\\ProEventos.Domain\\ProEventos.Domain.csproj"
             },
-            "C:\\dev\\Estudos_dotnet\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
-              "projectPath": "C:\\dev\\Estudos_dotnet\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
+            "C:\\dev\\Estudos\\Dotnet_Projects\\Udemy\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj": {
+              "projectPath": "C:\\dev\\Estudos\\Dotnet_Projects\\Udemy\\ProEventos\\Back\\src\\ProEventos.Persistence\\ProEventos.Persistence.csproj"
             }
           }
         }
