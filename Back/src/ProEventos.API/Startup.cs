@@ -5,7 +5,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using ProEventos.Application.Repository.Interfaces;
+using ProEventos.Persistence;
 using ProEventos.Persistence.Data;
+using ProEventos.Persistence.Repository;
+using ProEventos.Persistence.Repository.Interfaces;
 
 namespace ProEventos.API
 {
@@ -26,9 +30,13 @@ namespace ProEventos.API
             services.AddDbContext<ProEventosContext>(options =>
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
-
-
-            services.AddControllers();
+            services.AddControllers()
+                    .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling =
+                        Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                    );
+            services.AddScoped<IEventosPersistence, EventosPersistence>();
+            services.AddScoped<IGeralPersistence, GeralPersistence>();
+            services.AddScoped<IEventoService, EventoService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEventos.API", Version = "v1" });

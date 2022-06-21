@@ -54,15 +54,13 @@ namespace ProEventos.Application.Repository.Interfaces
             }
         }
 
-        public async Task<bool> DeleteEventos(int id, Evento model)
+        public async Task<bool> DeleteEventos(int id)
         {
             try
             {
                 var evento = await _eventoPersist.GetByIdEventosAsync(id, false);
 
                 if (evento == null) throw new Exception("Evento não encontrado.");
-
-                model.Id = evento.Id;
 
                 _geralPersist.Delete<Evento>(evento);
 

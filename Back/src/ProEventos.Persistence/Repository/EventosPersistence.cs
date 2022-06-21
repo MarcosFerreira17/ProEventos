@@ -14,6 +14,7 @@ namespace ProEventos.Persistence.Repository
         public EventosPersistence(ProEventosContext context)
         {
             _context = context;
+            // _context.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
         }
         public async Task<Evento[]> GetAllEventosAsync(bool includePalestrante = false)
         {
@@ -27,7 +28,7 @@ namespace ProEventos.Persistence.Repository
                 .ThenInclude(p => p.Palestrante);
             }
 
-            query = query.OrderBy(e => e.Id);
+            query = query.AsNoTracking().OrderBy(e => e.Id);
 
             return await query.ToArrayAsync();
         }
@@ -43,7 +44,7 @@ namespace ProEventos.Persistence.Repository
                 .ThenInclude(p => p.Palestrante);
             }
 
-            query = query.OrderBy(e => e.Id).Where(e => e.Tema.ToLower().Contains(tema.ToLower()));
+            query = query.AsNoTracking().OrderBy(e => e.Id).Where(e => e.Tema.ToLower().Contains(tema.ToLower()));
 
             return await query.ToArrayAsync();
         }
@@ -59,7 +60,7 @@ namespace ProEventos.Persistence.Repository
                 .ThenInclude(p => p.Palestrante);
             }
 
-            query = query.OrderBy(e => e.Id)
+            query = query.AsNoTracking().OrderBy(e => e.Id)
                         .Where(e => e.Id == EventoId);
 
             return await query.FirstOrDefaultAsync();

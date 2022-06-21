@@ -7,7 +7,7 @@ namespace ProEventos.Application.Repository.Interfaces
     {
         Task<Evento> AddEventos(Evento model);
         Task<Evento> UpdateEventos(int id, Evento model);
-        Task<bool> DeleteEventos(int id, Evento model);
+        Task<bool> DeleteEventos(int id);
 
         Task<Evento[]> GetAllEventosAsync(bool includePalestrante = false);
         Task<Evento[]> GetAllEventosByTemaAsync(string tema, bool includePalestrante = false);
